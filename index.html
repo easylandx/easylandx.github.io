@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="XS8GpuLyMKemPpViGqQJIhWMxTmhGCOhBQjQhXOWd6A" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting…</title>
+<link rel="canonical" href="https://easylandx.github.io/app/">
+<script>
+(function () {
+  var EN_URL = "https://easylandx.github.io/app/";
+  var ES_URL = "https://easylandx.github.io/app/ease.html";
+  var langs = [];
+  try {
+    if (navigator.languages && navigator.languages.length) {
+      langs = Array.prototype.slice.call(navigator.languages);
+    } else if (navigator.language) {
+      langs = [navigator.language];
+    } else if (navigator.userLanguage) {
+      langs = [navigator.userLanguage];
+    }
+  } catch (e) {}
+  // Spanish if ANY of the device's preferred languages is Spanish (es, es-ES, es-MX, ...)
+  var isSpanish = langs.some(function (l) {
+    l = String(l || "").toLowerCase();
+    return l === "es" || l.indexOf("es-") === 0;
+  });
+  window.location.replace(isSpanish ? ES_URL : EN_URL);
+})();
+</script>
+<!-- Fallback if JavaScript is disabled: default to the English version -->
+<noscript>
+  <meta http-equiv="refresh" content="0; URL=https://easylandx.github.io/app/">
+</noscript>
+</head>
+<body>
+<p>Redirecting… <a href="https://easylandx.github.io/app/">English</a> · <a href="https://easylandx.github.io/app/ease.html">Español</a></p>
+</body>
+</html>
